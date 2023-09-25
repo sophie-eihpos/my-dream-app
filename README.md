@@ -1,3 +1,6 @@
+Stopped following course due to its outdated code:
+https://app.pluralsight.com/library/courses/angular-forms/discussion
+
 # MyDreamApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
