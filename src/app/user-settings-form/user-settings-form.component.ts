@@ -8,12 +8,13 @@ import { UserSettings } from '../data/user-settings';
 })
 export class UserSettingsFormComponent implements OnInit {
 
+  // make sure the properties in the interface allow nulls
   originalUserSettings: UserSettings = {
-    name: 'milton',
-    emailOffers: true,
-    interfaceStyle: 'dark',
-    subscriptionType: 'Annual',
-    notes: 'here are some notes...'
+    name: 's',
+    emailOffers: null,
+    interfaceStyle: null,
+    subscriptionType: null,
+    notes: null
   };
 
   userSettings: UserSettings ={...this.originalUserSettings};

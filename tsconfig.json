@@ -29,5 +29,13 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
+
+    /* strictNullCheck=false - null and undefined are subtypes of an existing type, 
+        so we can assign them without error. BUT IT DIDN'T WORK
+        have to make property as such: 
+        name: string | null
+        with the question mark after name is not working either: name? : string
+    */
+    // "strictNullCheck": false
   }
 }
