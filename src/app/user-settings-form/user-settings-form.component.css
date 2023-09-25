@@ -1,0 +1,6 @@
+h2 {
+    color: rgb(99, 99, 158);
+}
+.ng-invalid:not(form).ng-touched {
+    border: 1px solid red;
+}

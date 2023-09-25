@@ -10,7 +10,7 @@ export class UserSettingsFormComponent implements OnInit {
 
   // make sure the properties in the interface allow nulls
   originalUserSettings: UserSettings = {
-    name: 's',
+    name: null,
     emailOffers: null,
     interfaceStyle: null,
     subscriptionType: null,
