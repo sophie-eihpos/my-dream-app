@@ -3,11 +3,13 @@
     <form class="form-horizontal" #form="ngForm">
         <div class="form-group">
             <label for="name">Name</label>
-            <input id="name" name="name" class="form-control" ngModel />
+            <input id="name" name="name" class="form-control" 
+                [(ngModel)]="userSettings.name" />
         </div>
 
         <div class="form-check form-group">
-            <input class="form-check-input" type="checkbox" value="" id="email" name="email" ngModel>
+            <input class="form-check-input" type="checkbox" value="" id="email" name="email" 
+                [(ngModel)]="userSettings.emailOffers">
             <label class="form-check-label" for="email">
                 Email Special Offers
             </label>
@@ -16,20 +18,23 @@
         <p>User Interface Style</p>
         <div class="form-group">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="interfaceStyle" id="interfaceStyle" value="light" ngModel
+                <input class="form-check-input" type="radio" name="interfaceStyle" id="interfaceStyle" value="light" 
+                    [(ngModel)]="userSettings.interfaceStyle"
                     checked>
                 <label class="form-check-label" for="interfaceStyle">
                     Light
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="interfaceStyle" id="interfaceStyle" value="medium" ngModel>
+                <input class="form-check-input" type="radio" name="interfaceStyle" id="interfaceStyle" value="medium" 
+                    [(ngModel)]="userSettings.interfaceStyle">
                 <label class="form-check-label" for="interfaceStyle">
                     Medium
                 </label>
             </div>
             <div class="form-check disabled">
-                <input class="form-check-input" type="radio" name="interfaceStyle" id="interfaceStyle" value="dark" ngModel>
+                <input class="form-check-input" type="radio" name="interfaceStyle" id="interfaceStyle" value="dark" 
+                    [(ngModel)]="userSettings.interfaceStyle">
                 <label class="form-check-label" for="interfaceStyle">
                     Dark
                 </label>
@@ -38,7 +43,8 @@
 
         <div class="form-group">
             <label for="subscriptionType">Subscription Type</label>
-            <select class="form-control" id="subscriptionType" name="subscriptionType" ngModel>
+            <select class="form-control" id="subscriptionType" name="subscriptionType" 
+                [(ngModel)]="userSettings.subscriptionType">
                 <option>Monthly</option>
                 <option>Annual</option>
                 <option>Lifetime</option>
@@ -47,16 +53,27 @@
 
         <div class="form-group">
             <label for="notes">Notes</label>
-            <textarea id="note" name="notes" class="form-control" rows="3" ngModel></textarea>
+            <textarea id="note" name="notes" class="form-control" rows="3" 
+                [(ngModel)]="userSettings.notes">
+            </textarea>
         </div>
 
         <button class="btn btn-primary">Send</button>
     </form>
 </div>
-
+With json pipe for original user settings:
+<br />
+<h6>{{ originalUserSettings | json }}</h6>
+<br />
+<br />
+With json pipe for user settings:
+<br />
+<h6>{{ userSettings | json }}</h6>
+<br />
+<br />
 With json pipe:
 <br />
-<h5>{{ form.value | json }}</h5>
+<h6>{{ form.value | json }}</h6>
 <br />
 <br />
 With json pipe:
